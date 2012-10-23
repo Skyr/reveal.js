@@ -1,0 +1,114 @@
+/**
+ * UUlm theme for reveal.js.
+ *
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Open Sans', sans-serif;
+$mainFontSize: 30px;
+$mainColor: #666666;
+$headingFont: 'Open Sans', sans-serif;
+$headingColor: #a32638;
+$headingLineHeight: 36px;
+$headingLetterSpacing: -1px;
+$headingTextTransform: none;
+$headingTextShadow: 0 1px 1px rgba(0,0,0,0.1);
+$heading1TextShadow: 0 1px 1px rgba(0,0,0,0.1);
+$linkColor: #3b759e;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #134674;
+
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( #bebebe, #f0f0f0 );
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal {
+  letter-spacing: -1px;
+  line-height: 36px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section:not(.stack).present {
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.reveal h1 {
+  font-size: 60px;
+  line-height: 60px;
+  padding: 0;
+  margin: 0;
+  margin-top: 200px;
+  padding-right: 40px;
+  font-weight: 600;
+  letter-spacing: -3px;
+}
+
+.reveal h2 {
+  font-size: 45px;
+  line-height: 45px;
+  padding: 0;
+  margin: 0;
+  padding-right: 40px;
+  padding-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.reveal h3 {
+  font-size: 30px;
+  line-height: 36px;
+  padding: 0;
+  margin: 0;
+  padding-right: 40px;
+  padding-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.reveal .slides div.normal {
+  padding: 20px 60px 32px;
+}
+
+.reveal .slides div.title {
+  padding: 20px 60px;
+}
+
+.reveal .slides div.fill {
+}
+
+.reveal .slides div.fill h3 {
+  background: rgba(255, 255, 255, .75);
+  padding-top: .2em;
+  padding-bottom: .3em;
+  margin-top: -.2em;
+  margin-left: -60px;
+  padding-left: 60px;
+  margin-right: -60px;
+  padding-right: 60px;
+}
+
