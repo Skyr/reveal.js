@@ -14,13 +14,14 @@
 // Include theme-specific fonts
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 
+$highlightColor: #a32638;
 
 // Override theme settings (see ../template/settings.scss)
 $mainFont: 'Open Sans', sans-serif;
 $mainFontSize: 30px;
 $mainColor: #666666;
 $headingFont: 'Open Sans', sans-serif;
-$headingColor: #a32638;
+$headingColor: $highlightColor;
 $headingLineHeight: 36px;
 $headingLetterSpacing: -1px;
 $headingTextTransform: none;
@@ -57,6 +58,24 @@ $selectionBackgroundColor: #134674;
   background-color: white;
 }
 
+.reveal section img {
+  border: 0;
+  box-shadow: none;
+}
+
+.reveal .frame {
+  border: 2px solid #666666;
+  box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+}
+
+.reveal .float-right {
+  float: right;
+}
+
+.reveal .float-left {
+  float: left;
+}
+
 .reveal h1 {
   font-size: 60px;
   line-height: 60px;
@@ -90,25 +109,86 @@ $selectionBackgroundColor: #134674;
   letter-spacing: -1px;
 }
 
+.reveal p {
+  margin: 0 0 20px 0;
+}
+
+.reveal li {
+  padding: 0;
+  margin: 0 0 0.4em;
+}
+
+.reveal ul li {
+  list-style: none outside none;
+}
+
+.reveal ul li:before {
+  color: $highlightColor;
+  content: "·";
+  margin-left: -0.75em;
+  width: 0.75em;
+  margin-right: 0.5em;
+}
+
+
 .reveal .slides div.normal {
   padding: 20px 60px 32px;
 }
+
 
 .reveal .slides div.title {
   padding: 20px 60px;
 }
 
-.reveal .slides div.fill {
+.reveal .slides div.title > img.header {
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 50%;
+  width: 100%;
+  min-height: 50%;
+  min-width: 100%;
+  margin: 0;
+  z-index: -1;
 }
 
-.reveal .slides div.fill h3 {
+.reveal .slides div.title .belowheader {
+  position: absolute;
+  top: 70%;
+  padding-top: 1ex;
+}
+
+.reveal .slides div.title .belowheader h1 {
+  margin: 0;
+}
+
+
+.reveal .slides div.fill {
+  padding: 20px 60px 32px;
+}
+
+.reveal .slides div.fill h2 {
   background: rgba(255, 255, 255, .75);
   padding-top: .2em;
   padding-bottom: .3em;
-  margin-top: -.2em;
+  margin-top: .3em;
+  margin-bottom: .3em;
   margin-left: -60px;
   padding-left: 60px;
   margin-right: -60px;
   padding-right: 60px;
 }
+
+.reveal .slides div.fill > img {
+  margin: 0;
+  border: 0;
+  border-radius: 10px 10px 10px 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -1;
+}
+
 
