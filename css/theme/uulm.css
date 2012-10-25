@@ -159,36 +159,20 @@ body {
   line-height: 36px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
-
-.reveal .slides {
-  text-align: left;
-}
-
-.reveal .slides section:not(.stack).present {
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
-
 .reveal section img {
   border: 0;
   box-shadow: none;
 }
-
 .reveal .frame {
   border: 2px solid #666666;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
 .reveal .float-right {
   float: right;
 }
-
 .reveal .float-left {
   float: left;
 }
-
 .reveal h1 {
   font-size: 60px;
   line-height: 60px;
@@ -199,7 +183,6 @@ body {
   font-weight: 600;
   letter-spacing: -3px;
 }
-
 .reveal h2 {
   font-size: 45px;
   line-height: 45px;
@@ -210,7 +193,6 @@ body {
   font-weight: 600;
   letter-spacing: -2px;
 }
-
 .reveal h3 {
   font-size: 30px;
   line-height: 36px;
@@ -221,20 +203,16 @@ body {
   font-weight: 600;
   letter-spacing: -1px;
 }
-
 .reveal p {
   margin: 0 0 20px 0;
 }
-
 .reveal li {
   padding: 0;
   margin: 0 0 0.4em;
 }
-
 .reveal ul li {
   list-style: none outside none;
 }
-
 .reveal ul li:before {
   color: #a32638;
   content: "·";
@@ -242,15 +220,22 @@ body {
   width: 0.75em;
   margin-right: 0.5em;
 }
-
+.reveal .slides {
+  text-align: left;
+}
+.reveal .slides section:not(.stack).present {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
 .reveal .slides div.normal {
   padding: 20px 60px 32px;
 }
-
 .reveal .slides div.title {
   padding: 20px 60px;
 }
-
 .reveal .slides div.title > img.header {
   position: absolute;
   left: 0;
@@ -262,21 +247,17 @@ body {
   margin: 0;
   z-index: -1;
 }
-
 .reveal .slides div.title .belowheader {
   position: absolute;
   top: 70%;
   padding-top: 1ex;
 }
-
 .reveal .slides div.title .belowheader h1 {
   margin: 0;
 }
-
 .reveal .slides div.fill {
   padding: 20px 60px 32px;
 }
-
 .reveal .slides div.fill h2 {
   background: rgba(255, 255, 255, 0.75);
   padding-top: .2em;
@@ -288,11 +269,11 @@ body {
   margin-right: -60px;
   padding-right: 60px;
 }
-
 .reveal .slides div.fill > img {
   margin: 0;
   border: 0;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
   position: absolute;
   left: 0;
   top: 0;
