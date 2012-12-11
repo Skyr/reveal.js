@@ -33,3 +33,15 @@ $selectionBackgroundColor: #134674;
 
 @import "uulm-base";
 
+.reveal .slides .darkbg {
+  color: white;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+  a {
+    color: white;
+    background: rgba(255,255,255,0.2);
+  }
+  a:hover {
+    color: $linkColorHover;
+    background: rgba(255,255,255,0.7);
+  }
+}

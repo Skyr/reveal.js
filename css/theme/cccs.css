@@ -286,3 +286,16 @@ body {
   min-width: 100%;
   z-index: -1;
 }
+
+.reveal .slides .darkbg {
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+.reveal .slides .darkbg a {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+.reveal .slides .darkbg a:hover {
+  color: #105291;
+  background: rgba(255, 255, 255, 0.7);
+}
