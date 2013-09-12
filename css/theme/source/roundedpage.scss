@@ -1,0 +1,127 @@
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Lato', sans-serif;
+$mainColor: #000;
+$headingFont: 'News Cycle', Impact, sans-serif;
+$headingColor: #000;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #fff;
+$linkColor: #00008B;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+$gray1: rgba(28,30,32,1);
+$gray2: rgba(85,90,95,1);
+$gray3: rgba(147,155,164,1);
+
+@mixin bodyBackground() {
+	@include radial-gradient($gray2, $gray3);
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+/*
+.reveal .slides section:not(.stack):before {
+//.reveal .slides section:not(.stack) {
+//    background-color: red;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    //right: 0;
+    //bottom: 0;
+    //-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    //height: 100%;
+    height: 700px;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+*/
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+
+.reveal .controls {
+  div.navigate-left,
+  div.navigate-left.enabled {
+    border-right-color: $gray1;
+  }
+
+  div.navigate-right,
+  div.navigate-right.enabled {
+    border-left-color: $gray1;
+  }
+
+  div.navigate-up,
+  div.navigate-up.enabled {
+    border-bottom-color: $gray1;
+  }
+
+  div.navigate-down,
+  div.navigate-down.enabled {
+    border-top-color: $gray1;
+  }
+
+  div.navigate-left.enabled:hover {
+    border-right-color: $gray3;
+  }
+
+  div.navigate-right.enabled:hover {
+    border-left-color: $gray3;
+  }
+
+  div.navigate-up.enabled:hover {
+    border-bottom-color: $gray3;
+  }
+
+  div.navigate-down.enabled:hover {
+    border-top-color: $gray3;
+  }
+}
+
+
+// Rounded page
+
+.reveal .slides {
+  section:not(.stack):before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    //right: 0;
+    //bottom: 0;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+  }
+  section:not(.stack) {
+    //-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    //height: 100%;
+    height: 700px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+}
+
